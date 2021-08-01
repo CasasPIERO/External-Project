@@ -85,6 +85,7 @@ a{
 .login-enlace{
     background-color: var(--theme-color-2);
     color: #fff;
+    font-size: 15px;
     padding: 10px 22px;
     border-radius: 30px;
     text-transform: uppercase;
@@ -128,11 +129,111 @@ a{
     font-size: 18px;
     cursor: pointer;
 }
-
 /* FIN ESTILOS NAVEGACION */
 
-/* INICIO ESTILOS FOOTER*/
+/* INICIO ESTILOS SECCION SUSCRIBCION */
+.suscribe{
+    width: 100%;
+    background-image: url('../img/img-home-contact.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    position: relative;
+    z-index: 0;
+}
+.suscribe::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(8, 8, 8, 0.26);
+    z-index: -1;
+}
+.suscribe-contain{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.suscribe-text{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.suscribe-text span{
+    font-size: 40px;
+    margin-right: 20px;
+}
+.suscribe-text div h2{
+    padding-bottom: 10px;
+}
+.suscribe-contain .form{
+    width: 40%;
+    display: flex;
+}
+.suscribe-contain .form input[type="email"]{
+    padding: 15px 50px 15px 15px;
+    font-size: 16px;
+    width: 100%;
+    color: #333;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+}
+.suscribe-contain .form button[type="submit"]{
+    background-color: var(--theme-color-2);
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 22px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    text-transform: uppercase;
+    margin-left: -3em;
+    transition: all .3s;
+    position: relative;
+}
+.suscribe-contain .form button[type="submit"]::before{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #fff;
+    top: 0;
+    right: 20%;
+    position: absolute;
+    transform: skewX(-45deg);
+    transition: all .3s;
+}
+.suscribe-contain .form button[type="submit"]::after{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #fff;
+    bottom: 0;
+    left: 20%;
+    position: absolute;
+    transform: skewX(45deg);
+    transition: all .3s;
+}
+.suscribe-contain .form button[type="submit"]:hover{
+    background-color: var(--theme-color-1);
+}
+.suscribe-contain .form button[type="submit"]:hover::before{
+    right: 80%;
+}
+.suscribe-contain .form button[type="submit"]:hover::after{
+    left: 73%;
+}
+/* FIN ESTILOS SECCION SUSCRIBCION */
 
+/* INICIO ESTILOS FOOTER*/
 .footer{
     width: 100%;
     background-color: #000;
@@ -294,6 +395,21 @@ a{
 
     /* FIN ESTILOS NAVEGACION */
 
+    /* INICIO ESTILOS SECCION SUSCRIBCION */
+    .suscribe-contain{
+        flex-direction: column;
+    }
+    .suscribe-text{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .suscribe-contain .form{
+        width: 100%;
+        max-width: 480px;
+    }
+    /* FIN ESTILOS SECCION SUSCRIBCION */
+
     /* INICIO ESTILOS FOOTER */
 
     .footer-top{
@@ -326,8 +442,35 @@ a{
 }
 
 @media screen and (max-width: 477px){
-    /* INICIO ESTILOS FOOTER */
+    /* INICIO ESTILOS SECCION SUSCRIBCION */
+    .suscribe-text{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .suscribe-text div{
+        text-align: center;
+    }
+    .suscribe-text span{
+        margin-right: 0;
+    }
+    .suscribe-contain .form{
+        flex-direction: column;
+    }
+    .suscribe-contain .form input[type="email"]{
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    .suscribe-contain .form button[type="submit"]{
+        align-self: center;
+        margin-left: 0;
+        margin-top: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+    /* FIN ESTILOS SECCION SUSCRIBCION */
 
+    /* INICIO ESTILOS FOOTER */
     .footer-top{
         display: flex;
         flex-direction: column;
@@ -343,6 +486,5 @@ a{
     .footer-bot-left{
         flex-wrap: wrap;
     }
-
     /* FIN ESTILOS FOOTER */
 }
