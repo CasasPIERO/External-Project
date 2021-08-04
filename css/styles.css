@@ -131,6 +131,187 @@ a{
 }
 /* FIN ESTILOS NAVEGACION */
 
+/* INICIO ESTILOS SECCION TAREAS */
+.tareas{
+    width: 90%;
+    max-width: 1300px;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tareas div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-width: 270px;
+    padding: 20px;
+}
+.tareas div img{
+    max-width: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.tareas div img:hover{
+    opacity: .75;
+}
+.tareas div h2{
+    margin-top: 20px;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.tareas div h2:hover{
+    opacity: .75;
+}
+/* FIN ESTILOS SECCION TAREAS */
+
+/* INICIO ESTILOS SECCION CUIDADOS */
+.cuidados-contain{
+    width: 100%;
+    padding: 80px 0;
+    background-image: url('../img/bg1.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+.cuidados-contain::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(8, 8, 8, 0.35);
+    z-index: -1;
+}
+.cuidados{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    color: #fff;
+}
+.cuidados-flex{
+    width: 45%;
+}
+.cuidados-flex p{
+    color: #eee;
+    font-size: 17px;
+    line-height: 1.5;
+}
+.cuidados-flex .cuidados-flex-upp{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+.cuidados-flex h2{
+    padding: 20px 0;
+    font-size: 45px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.cuidados-flex h2:hover{
+    opacity: .75;
+}
+.cuidados-flex a{
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #fff;
+    color: #000;
+    margin-top: 30px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: lighter;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.cuidados-flex .transparent{
+    background-color: transparent;
+    color: #fff;
+}
+.cuidados-flex a::before{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #000;
+    top: -2px;
+    right: 20%;
+    position: absolute;
+    transform: skewX(-45deg);
+    transition: all .3s ease-in-out;
+}
+.cuidados-flex a::after{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #000;
+    bottom: -2px;
+    left: 20%;
+    position: absolute;
+    transform: skewX(45deg);
+    transition: all .3s ease-in-out;
+}
+.cuidados-flex a:hover{
+    opacity: .75;
+}
+.cuidados-flex a:hover::before{
+    opacity: .75;
+    right: 80%;
+}
+.cuidados-flex a:hover::after{
+    opacity: .75;
+    left: 80%;
+}
+/* FIN ESTILOS SECCION CUIDADOS */
+
+/*INICIO ESTILOS SECCION ATENCION */
+.atencion-contain{
+    width: 100%;
+    padding: 80px 0;
+}
+.atencion{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: space-between;
+}
+.atencion img{
+    margin: 0 auto;
+    width: 45%;
+    max-width: 100%;
+}
+.atencion-text{
+    align-self: center;
+    width: 45%;
+}
+.atencion-text h2{
+    font-size: 45px;
+    color: #2a2926;
+    line-height: 50px;
+    margin: 30px 0;
+}
+.atencion-text p{
+    line-height: 1.5;
+    color: #67696f;
+    font-size: 17px;
+}
+.atencion-text .atencion-text-upp{
+    text-transform: uppercase;
+    color: #2a2926;
+    font-size: 13px;
+    font-weight: 600;
+}
+/* FIN ESTILOS SECCION ATENCION */
+
 /* INICIO ESTILOS SECCION TESTIMONIOS */
 .testimonios-contain{
     width: 100%;
@@ -152,16 +333,19 @@ a{
     justify-content: space-between;
 }
 .user{
+    padding: 30px;
     width: 45%;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.09);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.09);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.09);
+    border: 1px solid #eee;
+    box-shadow: 1px 4px 6px 1px rgb(0 0 0 / 5%);
+    background-color: var(--main-bg-color);
 }
 .user-header{
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 .user-header img{
+    transform: scale(.8);
     border-radius: 50%;
     transition: all .3s;
     margin-right: 20px;
@@ -169,15 +353,20 @@ a{
 .user-header img:hover{
     opacity: .75;
 }
+.user-header-name p{
+    font-weight: lighter;
+    padding-top: 8px;
+}
 .user > p{
+    color: #67696f;
     margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 15px;
     line-height: 1.5;
 }
 .user > p span{
     color: var(--theme-color-2);
-    font-size: 30px;
+    font-size: 25px;
+    position: relative;
+    top: -10px;
 }
 /* FIN ESTILOS SECCION TESTIMONIOS */
 
@@ -442,8 +631,25 @@ a{
         margin-right: 20px;
         cursor: pointer;
     }
-
     /* FIN ESTILOS NAVEGACION */
+
+    /* INICIO ESTILOS ATENCION */
+    .atencion{
+        flex-direction: column;
+        align-items: center;
+    }
+    .atencion img{
+        width: 100%;
+    }
+    .atencion-text{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .atencion-text h2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    /* FIN ESTILOS ATENCION */
 
     /* INICIO ESTILOS SECCION SUSCRIBCION */
     .suscribe-contain{
@@ -491,7 +697,19 @@ a{
     /* FIN ESTILOS FOOTER */
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 845px){
+    /* INICIO ESTILOS SECCION CUIDADOS */
+    .cuidados-flex{
+        width: 55%;
+    }
+    .cuidados-flex h2{
+        font-size: 38px;
+        line-height: 40px;
+    }
+    /* FIN ESTILOS SECCION CUIDADOS */
+}
+
+@media screen and (max-width: 730px) {
     /* INICIO ESTILOS SECCION TESTIMONIOS */
     .testimonios-users{
         flex-direction: column;
@@ -505,7 +723,27 @@ a{
     /* FIN ESTILOS SECCION TESTIMONIOS */
 }
 
+@media screen and (max-width: 637px){
+    /* INICIO ESTILOS SECCION CUIDADOS */
+    .cuidados-flex{
+        width: 90%;
+    }
+    .cuidados-flex h2{
+        max-width: 300px;
+        font-size: 32px;
+        line-height: 35px;
+    }
+    /* FIN ESTILOS SECCION CUIDADOS */
+}
+
 @media screen and (max-width: 477px){
+    /* INICIO ESTILOS SECCION ATENCION */
+    .atencion-text h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    /* FIN ESTILOS SECCION ATENCION */
+
     /* INICIO ESTILOS SECCION SUSCRIBCION */
     .suscribe-text{
         flex-direction: column;
@@ -551,4 +789,19 @@ a{
         flex-wrap: wrap;
     }
     /* FIN ESTILOS FOOTER */
+}
+
+@media screen and (max-width: 366px) {
+    /* INICIO ESTILOS SECCION CUIDADOS */
+    .cuidados-flex .transparent{
+        margin-top: 15px;
+    }
+    /* FIN ESTILOS SECCION CUIDADOS */
+
+    /* INICIO ESTILOS SECCION ATENCION */
+    .atencion-text h2{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    /* FIN ESTILOS SECCION ATENCION */
 }
