@@ -312,6 +312,163 @@ a{
 }
 /* FIN ESTILOS SECCION ATENCION */
 
+/* INICIO ESTILOS SECCION EQUIPO */
+.team-contain{
+    width: 100%;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+.team{
+    color: #67696f;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.team-text{
+    align-self: center;
+    width: 32%;
+}
+.team-text h2{
+    color: #2a2926;
+    font-size: 40px;
+}
+.team-text p{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    line-height: 1.5;
+}
+.team-text a{
+    background-color: var(--theme-color-2);
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+.team-text a::before{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #fff;
+    top: 0;
+    right: 20%;
+    position: absolute;
+    transform: skewX(-45deg);
+    transition: all .3s ease-in-out;
+}
+.team-text a::after{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #fff;
+    bottom: 0;
+    left: 20%;
+    position: absolute;
+    transform: skewX(45deg);
+    transition: all .3s ease-in-out;
+}
+.team-text a:hover{
+    background-color: var(--theme-color-1);
+}
+.team-text a:hover::before{
+    right: 80%;
+}
+.team-text a:hover::after{
+    left: 80%;
+}
+.team-cards{
+    width: 60%;
+}
+.team-cards-labels{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.team-cards-labels span{
+    margin: 0 10px 0 0;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+.team-cards-labels span:last-child{
+    opacity: .75;
+    margin: 0 0 0 10px;
+}
+.team-cards-1, .team-cards-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cards-none{
+    display: none;
+}
+.card{
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 1px 4px 6px 1px rgb(0 0 0 / 5%);
+    width: 50%;
+}
+.card1, .card3{
+    margin: 40px 10px 0 0;
+}
+.card2, .card4{
+    margin: 40px 0 0 10px;
+}
+.card img{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.card img:hover{
+    opacity: .75;
+}
+.card-text{
+    padding: 15px 0 20px 0;
+}
+.card-text h3{
+    cursor: pointer;
+    color: #2a2926;
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+}
+.card-text h3:hover{
+    opacity: .75;
+}
+.card-text p{
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.card-text-redes span{
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgba(68, 68, 68, 0.24);
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #fff;
+    color: #2a2926;
+    font-size: 14px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.card-text-redes span:hover{
+    color: #fff;
+    background-color: #fd7979;
+}
+/* FIN ESTILOS SECCION EQUIPO */
+
 /* INICIO ESTILOS SECCION TESTIMONIOS */
 .testimonios-contain{
     width: 100%;
@@ -697,6 +854,26 @@ a{
     /* FIN ESTILOS FOOTER */
 }
 
+
+@media screen and (max-width: 947px) {
+    /* INICIO ESTILOS SECCION EQUIPO */
+    .team{
+        flex-direction: column;
+    }
+    .team-text{
+        width: 80%;
+        margin-bottom: 60px;
+    }
+    .team-text p{
+        margin-bottom: 30px;
+    }
+    .team-cards{
+        align-self: center;
+        width: 80%;
+    }
+    /* FIN ESTILOS SECCION EQUIPO */
+}
+
 @media screen and (max-width: 845px){
     /* INICIO ESTILOS SECCION CUIDADOS */
     .cuidados-flex{
@@ -734,6 +911,18 @@ a{
         line-height: 35px;
     }
     /* FIN ESTILOS SECCION CUIDADOS */
+
+    /* INICIO ESTILOS SECCION EQUIPO */
+    .team-text{
+        width: 90%;
+    }
+    .team-text h2{
+        font-size: 32px;
+    }
+    .team-cards{
+        width: 90%;
+    }
+    /* FIN ESTILOS SECCION EQUIPO */
 }
 
 @media screen and (max-width: 477px){
@@ -743,6 +932,28 @@ a{
         line-height: 40px;
     }
     /* FIN ESTILOS SECCION ATENCION */
+
+    /* INICIO ESTILOS SECCION EQUIPO */
+    .team-text{
+        width: 100%;
+    }
+    .team-cards{
+        width: 100%;
+    }
+    .team-cards-1, .team-cards-2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 75%;
+    }
+    .card1, .card3{
+        margin-right: 0;
+    }
+    .card2, .card4{
+        margin-left: 0;
+    }
+    /* FIN ESTILOS SECCION EQUIPO */
 
     /* INICIO ESTILOS SECCION SUSCRIBCION */
     .suscribe-text{
@@ -804,4 +1015,13 @@ a{
         line-height: 37px;
     }
     /* FIN ESTILOS SECCION ATENCION */
+
+    /* INICIO ESTILOS SECCION EQUIPO */
+    .team-text h2{
+        font-size: 30px;
+    }
+    .card{
+        width: 90%;
+    }
+    /* FIN ESTILOS SECCION EQUIPO */
 }
